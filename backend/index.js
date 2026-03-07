@@ -14,8 +14,10 @@ dotenv.config()
 
 const port=process.env.PORT || 5000
 app.use(cors({
-    origin:"https://vybe-frontend-3spn.onrender.com",
-    // http://localhost:5173
+    origin:[
+        "http://localhost:5173",
+        "https://vybe-frontend-3spn.onrender.com",
+   ],
     credentials:true
 }))
 app.use(express.json())
